@@ -1,4 +1,4 @@
-# terminal-cfg
+# dotfiles
 ## Windows Terminal
 - Windows Terminal can be downloaded from this [link](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) or by searching "Windows Terminal" from the Microsoft Store.
 - Windows Terminal source code is available [here](https://github.com/microsoft/terminal).
