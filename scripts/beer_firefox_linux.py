@@ -11,7 +11,7 @@ profile = webdriver.FirefoxProfile()
 profile.set_preference("media.volume_scale", "0.0")
 
 # Initialize Firefox webdriver
-driver = webdriver.Firefox(firefox_profile=profile, service_log_path=os.devnull)
+driver = webdriver.Firefox(firefox_profile=profile, service_log_path=os.devnull, executable_path="/home/miika/Asiakirjat/SOURCECODE/dotfiles/scripts/geckodriver")
 
 # Arrow key variables
 rightarrow = Keys.ARROW_RIGHT

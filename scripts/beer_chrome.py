@@ -22,9 +22,6 @@ downarrow = Keys.ARROW_DOWN
 # Space key variable
 spacekey = Keys.SPACE
 
-# Array of arrow keys
-arrowkeys = [leftarrow, downarrow, rightarrow, uparrow]
-
 # Open oispakaljaa.com
 driver.get("http://oispakaljaa.com")
 
@@ -46,8 +43,11 @@ game_won = driver.find_element_by_xpath("/html/body/div[2]/div[2]/div[4]/div/a[1
 # While process is alive
 while True:
 
-    # Press arrow keys in random oredr
-    game.send_keys(arrowkeys)
+    # Press arrow keys the following order
+    game.send_keys(leftarrow)
+    game.send_keys(downarrow)
+    game.send_keys(rightarrow)
+    game.send_keys(uparrow)
 
     # If game is over, start again
     if try_again.is_displayed():

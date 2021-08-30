@@ -1,3 +1,4 @@
 .vscode/
 scripts/geckodriver.exe
 scripts/chromedriver.exe
+scripts/geckodriver
