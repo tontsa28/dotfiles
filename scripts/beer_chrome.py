@@ -1,12 +1,17 @@
-import random
+import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-# This is a bot script for
-# oispakaljaa.com
+#
+# This is a bot script for oispakaljaa.com
+#
 
-# Set driver variable to Firefox webdriver
-driver = webdriver.Firefox()
+# Mute webdriver audio
+profile = webdriver.ChromeOptions()
+profile.add_argument("--mute-audio")
+
+# Initialize Firefox webdriver
+driver = webdriver.Chrome(options=profile, service_log_path=os.devnull)
 
 # Arrow key variables
 rightarrow = Keys.ARROW_RIGHT
@@ -35,12 +40,19 @@ drunk_count = driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div[1]"
 # Find drunk button xpath
 drunk_button = driver.find_element_by_xpath("/html/body/div[2]/div[3]/div/div[1]")
 
+# Find game won button xpath
+game_won = driver.find_element_by_xpath("/html/body/div[2]/div[2]/div[4]/div/a[1]")
+
 # While process is alive
 while True:
 
     # Press arrow keys in random oredr
-    game.send_keys(random.choice(arrowkeys))
+    game.send_keys(arrowkeys)
 
     # If game is over, start again
     if try_again.is_displayed():
         game.send_keys(spacekey)
+
+    # If game is won, stop the script
+    if game_won.is_displayed():
+        exit()
