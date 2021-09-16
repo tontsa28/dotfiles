@@ -1,13 +1,7 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    // Add custom actions and keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
     "actions": 
     [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
         {
             "command": 
             {
@@ -17,18 +11,13 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        // Press Ctrl+Shift+F to open the search box
-        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
         {
             "command": 
             {
@@ -47,15 +36,17 @@
         "defaults": 
         {
             "cursorShape": "filledBox",
-            "fontFace": "CaskaydiaCove Nerd Font",
-            "fontSize": 13,
+            "font": 
+            {
+                "face": "Source Code Pro",
+                "size": 14
+            },
             "foreground": "#FFFFFF"
         },
         "list": 
         [
             {
                 "acrylicOpacity": 0.85000002384185791,
-				"tabTitle": "PowerShell",
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
@@ -63,14 +54,14 @@
                 "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "icon": "ms-appdata:///local/pwsh-preview.scale-200.png",
+                "icon": "ms-appdata:///local/powershell_logo.png",
                 "name": "Windows PowerShell",
                 "startingDirectory": "c:/",
+                "tabTitle": "PowerShell",
                 "useAcrylic": true
             },
             {
                 "acrylicOpacity": 0.85000002384185791,
-				"tabTitle": "cmd",
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
@@ -80,56 +71,56 @@
                 "hidden": false,
                 "name": "Command Prompt",
                 "startingDirectory": "c:/",
+                "tabTitle": "cmd",
                 "useAcrylic": true
             },
-			{
-			   "acrylicOpacity": 0.85000002384185791,
-			   "tabTitle": "bash",
-			   "backgroundImage": "ms-appdata:///local/au-os-M.png",
-			   "backgroundImageAlignment": "bottomRight",
-			   "backgroundImageStretchMode": "none",
-			   "colorScheme": "Aurelia",
-			   "guid": "{eb3b3ef9-d485-4e15-b3b2-25e97f91a3b4}",
-			   "hidden": false,
-			   "name": "bash",
-			   "commandline": "%PROGRAMFILES%\\Git\\bin\\bash.exe",
-			   "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-			   "startingDirectory" : "~",
-			   "useAcrylic": true
-			},
             {
                 "acrylicOpacity": 0.85000002384185791,
-				"tabTitle": "Ubuntu",
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
                 "colorScheme": "Aurelia",
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "commandline": "%PROGRAMFILES%\\Git\\bin\\bash.exe",
+                "guid": "{eb3b3ef9-d485-4e15-b3b2-25e97f91a3b4}",
                 "hidden": false,
-                "icon": "ms-appdata:///local/Square44x44Logo.altform-unplated_targetsize-32_ubuntu.png",
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "c:/",
+                "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "bash",
+                "startingDirectory": "~",
+                "tabTitle": "bash",
                 "useAcrylic": true
+            },
+			{
+				"acrylicOpacity": 0.85000002384185791,
+				"backgroundImage": "ms-appdata:///local/au-os-M.png",
+				"backgroundImageAlignment": "bottomRight",
+				"backgroundImageStretchMode": "none",
+				"colorScheme": "Aurelia",
+                "guid": "{ae67e7b5-a2a3-4bca-bd46-510223a2703d}",
+				"hidden": false,
+                "icon": "ms-appdata:///local/debian_logo.png",
+                "name": "Debian",
+				"commandline": "wsl.exe -d debian",
+                "startingDirectory": "%USERPROFILE%",
+				"tabTitle": "Debian",
+				"useAcrylic": true
             },
             {
                 "acrylicOpacity": 0.85000002384185791,
-				"tabTitle": "Kali",
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
                 "colorScheme": "Aurelia",
                 "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
                 "hidden": false,
-                "icon": "ms-appdata:///local/Square44x44Logo.altform-unplated_targetsize-32_kali.png",
+                "icon": "ms-appdata:///local/kali_logo.png",
                 "name": "Kali",
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "c:/",
+                "commandline": "wsl.exe -d kali-linux",
+                "startingDirectory": "%USERPROFILE%",
+                "tabTitle": "Kali",
                 "useAcrylic": true
             },
             {
                 "acrylicOpacity": 0.85000002384185791,
-				"tabTitle": "Azure Cloud Shell",
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
@@ -139,8 +130,9 @@
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure",
                 "startingDirectory": "c:/",
+                "tabTitle": "Azure Cloud Shell",
                 "useAcrylic": true
-            }
+            },
         ]
     },
     "schemes": 
