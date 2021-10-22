@@ -46,12 +46,12 @@
         "list": 
         [
             {
-                "acrylicOpacity": 0.85000002384185791,
+                "acrylicOpacity": 0.5,
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
                 "colorScheme": "Aurelia",
-                "commandline": "powershell.exe",
+                "commandline": "powershell.exe -nologo",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "icon": "ms-appdata:///local/powershell_logo.png",
@@ -61,7 +61,22 @@
                 "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.85000002384185791,
+                "acrylicOpacity": 0.5,
+                "backgroundImage": "ms-appdata:///local/au-os-M.png",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageStretchMode": "none",
+                "colorScheme": "Aurelia",
+                "commandline": "pwsh.exe -nologo",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell 7",
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": "c:/",
+                "tabTitle": "PowerShell 7",
+                "useAcrylic": true
+            },
+            {
+                "acrylicOpacity": 0.5,
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
@@ -75,7 +90,7 @@
                 "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.85000002384185791,
+                "acrylicOpacity": 0.5,
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
@@ -85,42 +100,43 @@
                 "hidden": false,
                 "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "bash",
-                "startingDirectory": "~",
+                "startingDirectory": "c:/",
                 "tabTitle": "bash",
                 "useAcrylic": true
             },
-			{
-				"acrylicOpacity": 0.85000002384185791,
-				"backgroundImage": "ms-appdata:///local/au-os-M.png",
-				"backgroundImageAlignment": "bottomRight",
-				"backgroundImageStretchMode": "none",
-				"colorScheme": "Aurelia",
-                "guid": "{ae67e7b5-a2a3-4bca-bd46-510223a2703d}",
-				"hidden": false,
-                "icon": "ms-appdata:///local/debian_logo.png",
-                "name": "Debian",
-				"commandline": "wsl.exe -d debian",
-                "startingDirectory": "%USERPROFILE%",
-				"tabTitle": "Debian",
-				"useAcrylic": true
-            },
             {
-                "acrylicOpacity": 0.85000002384185791,
+                "acrylicOpacity": 0.5,
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
                 "colorScheme": "Aurelia",
+                "commandline": "wsl.exe -d debian",
+                "guid": "{ae67e7b5-a2a3-4bca-bd46-510223a2703d}",
+                "hidden": false,
+                "icon": "ms-appdata:///local/debian_logo.png",
+                "name": "Debian",
+                "startingDirectory": "%USERPROFILE%",
+                "tabTitle": "Debian",
+                "useAcrylic": true
+            },
+            {
+                "acrylicOpacity": 0.5,
+                "backgroundImage": "ms-appdata:///local/au-os-M.png",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageStretchMode": "none",
+                "colorScheme": "Aurelia",
+                "commandline": "wsl.exe -d kali-linux",
                 "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
                 "hidden": false,
                 "icon": "ms-appdata:///local/kali_logo.png",
                 "name": "Kali",
-                "commandline": "wsl.exe -d kali-linux",
+                "source": "Windows.Terminal.Wsl",
                 "startingDirectory": "%USERPROFILE%",
                 "tabTitle": "Kali",
                 "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.85000002384185791,
+                "acrylicOpacity": 0.5,
                 "backgroundImage": "ms-appdata:///local/au-os-M.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageStretchMode": "none",
@@ -132,7 +148,7 @@
                 "startingDirectory": "c:/",
                 "tabTitle": "Azure Cloud Shell",
                 "useAcrylic": true
-            },
+            }
         ]
     },
     "schemes": 
@@ -368,5 +384,5 @@
             "yellow": "#808000"
         }
     ],
-    "tabWidthMode": "titleLength"
+    "tabWidthMode": "compact"
 }
