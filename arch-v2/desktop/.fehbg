@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/miika/Downloads/pexels-ian-beckley-2440024.jpg' 
