@@ -2,6 +2,13 @@
 
 sleep 0.5
 
+# Determine CPU hwmon path
+for i in /sys/class/hwmon/hwmon*/temp*_input; do 
+    if [ "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*}))" = "coretemp: Package id 0" ]; then
+        export HWMON_PATH="$i"
+    fi
+done
+
 PRIMARY=$(xrandr --query | grep " connected" | grep "primary" | cut -d" " -f1)
 OTHERS=$(xrandr --query | grep " connected" | grep -v "primary" | cut -d" " -f1)
 

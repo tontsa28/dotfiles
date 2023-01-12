@@ -2,25 +2,20 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-dex --autostart --environment bspwm &
 setxkbmap -model pc105 -layout fi,fi -option "grp:alt_shift_toggle" &
 /usr/bin/lxpolkit &
-/usr/bin/fixmonitors.sh
+/usr/bin/monitor-init.sh
 picom &
 bspc monitor DP-4 -d 1 4 5 6 7
 bspc monitor HDMI-1-0 -d 2
 bspc monitor DP-1-1 -d 3
 xsetroot -cursor_name left_ptr &
+feh --bg-fill Downloads/pexels-ian-beckley-2440024.jpg &
+~/.config/polybar/launch.sh &
 
-bspc config border_width         2
-bspc config window_gap           4
+bspc config border_width         3
+bspc config window_gap           0
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off

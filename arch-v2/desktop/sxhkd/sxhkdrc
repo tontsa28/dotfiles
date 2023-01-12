@@ -167,4 +167,4 @@ XF86AudioMicMute
 
 # suspend the system
 super + shift + p
-  systemctl suspend
+  .local/bin/powermenu
