@@ -1,0 +1,43 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "auto_update": false,
+  "base_keymap": "VSCode",
+  "theme": "VSCode Dark Modern",
+  "ui_font_size": 15.5,
+  "buffer_font_size": 15.5,
+  "buffer_font_weight": 500,
+  "buffer_font_family": "Monaspace Argon",
+  "soft_wrap": "none",
+  "cursor_blink": false,
+  "terminal": {
+    "blinking": "off",
+    "cursor_shape": "block",
+    "font_family": "Monaspace Argon",
+    "font_size": 15.5,
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [".venv", "venv"],
+        "activate_script": "default"
+      }
+    }
+  },
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "off"
+        },
+        "python.venvPath": "venv"
+      }
+    }
+  }
+}

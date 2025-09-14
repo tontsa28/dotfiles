@@ -1,0 +1,8 @@
+[
+  {
+    "bindings": {
+      "cmd-Ö": "workspace::NewTerminal",
+      "cmd-ö": "workspace::ToggleBottomDock"
+    }
+  }
+]
